@@ -7,7 +7,6 @@
 
 // Include GLFW
 #include <GLFW/glfw3.h>
-GLFWwindow* window;
 
 void processInput(GLFWwindow *window)
 {
@@ -37,7 +36,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // Open a window and create its OpenGL context
-    window = glfwCreateWindow( 1024, 768, "Tutorial 01", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow( 1024, 768, "Tutorial 01", nullptr, nullptr);
 
     if( window == nullptr ){
         std::cerr << "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials." << std::endl;
